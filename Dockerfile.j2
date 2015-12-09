@@ -68,12 +68,6 @@ RUN     cd /opt/graphite/webapp/graphite && python manage.py syncdb --noinput
 # Configure Grafana
 ADD     docker/grafana/grafana/custom.ini /opt/grafana/conf/custom.ini
 
-# Add the default dashboards
-RUN     mkdir /src/dashboards
-ADD     docker/grafana/grafana/dashboards/* /src/dashboards/
-RUN     mkdir /src/dashboard-loader
-ADD     docker/grafana/grafana/dashboard-loader/dashboard-loader.js /src/dashboard-loader/
-
 # Configure nginx and supervisord
 ADD     docker/grafana/nginx/nginx.conf /etc/nginx/nginx.conf
 ADD     docker/grafana/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
