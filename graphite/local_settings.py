@@ -33,6 +33,8 @@ TIME_ZONE = 'UTC'
 #LDAP_BASE_PASS = "readonly_account_password"
 #LDAP_USER_QUERY = "(username=%s)"  #For Active Directory use "(sAMAccountName=%s)"
 
+SECRET_KEY = "j834rfeD#R##7k7wer3i8778i78U&(UIHNMY*HIIIIIIIIY"
+
 # If sqlite won't cut it, configure your real database here (don't forget to run manage.py syncdb!)
 #DATABASE_ENGINE = 'mysql' # or 'postgres'
 #DATABASE_NAME = 'graphite'
