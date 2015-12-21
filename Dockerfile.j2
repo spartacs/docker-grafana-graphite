@@ -63,7 +63,6 @@ ADD     docker/grafana/graphite/local_settings.py /opt/graphite/webapp/graphite/
 ADD     docker/grafana/graphite/carbon.conf /opt/graphite/conf/carbon.conf
 ADD     docker/grafana/graphite/storage-schemas.conf /opt/graphite/conf/storage-schemas.conf
 ADD     docker/grafana/graphite/storage-aggregation.conf /opt/graphite/conf/storage-aggregation.conf
-RUN     cd /opt/graphite/webapp/graphite && python manage.py syncdb --noinput
 
 # Configure Grafana
 ADD     docker/grafana/grafana/custom.ini /opt/grafana/conf/custom.ini
