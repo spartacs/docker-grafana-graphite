@@ -10,8 +10,25 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN     apt-get -y install software-properties-common
 RUN     add-apt-repository -y ppa:chris-lea/node.js
 RUN     apt-get -y update
-RUN     apt-get -y install python-django-tagging python-simplejson python-memcache python-ldap python-cairo python-pysqlite2 python-support \
-                           python-pip gunicorn supervisor nginx-light nodejs git wget curl openjdk-7-jre build-essential python-dev
+
+RUN apt-get -y install python-django-tagging
+RUN apt-get install -y python-simplejson
+RUN apt-get install -y python-memcache
+RUN apt-get install -y python-ldap
+RUN apt-get install -y python-cairo
+RUN apt-get install -y python-pysqlite2
+RUN apt-get install -y python-support
+RUN apt-get install -y python-pip
+RUN apt-get install -y gunicorn
+RUN apt-get install -y supervisor
+RUN apt-get install -y nginx-light
+RUN apt-get install -y nodejs
+RUN apt-get install -y git
+RUN apt-get install -y wget
+RUN apt-get install -y curl
+RUN apt-get install -y openjdk-7-jre
+RUN apt-get install -y build-essential
+RUN apt-get install -y python-dev
 
 RUN     pip install Twisted==11.1.0
 RUN     pip install Django==1.5
