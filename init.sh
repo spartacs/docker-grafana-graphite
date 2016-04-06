@@ -11,7 +11,7 @@ function cleanup()
 trap cleanup EXIT
 set -e
 mkdir -p /opt/graphite/storage/whisper
-mkdir -p /opt/graphite/log/webapp
+mkdir -p /opt/graphite/storage/log/webapp
 touch /opt/graphite/storage/graphite.db /opt/graphite/storage/index
 chown -R www-data /opt/graphite/storage
 chmod 0775 /opt/graphite/storage /opt/graphite/storage/whisper
