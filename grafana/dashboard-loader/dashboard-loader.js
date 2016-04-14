@@ -55,14 +55,14 @@ var upsertDashboard = function(dashboard_data, callback) {
           setTimeout(function() {
             upsertDashboard(dashboard_data, callback);
           }, 1000);
-      } 
-      
+      }
+
   });
-  
+
   update_request.on('error', function(e) {
     console.log('Error trying to create/update the [' + dashboard_data.title + '] dashboard: ' + e);
   });
-  
+
   update_request.write(JSON.stringify({dashboard:dashboard_data, overwrite: true}));
   update_request.end();
 }
@@ -91,13 +91,13 @@ var dashboardExists = function(slug, callback) {
             dashboardExists(slug, callback);
           });
           break;
-      } 
+      }
   });
-  
+
   get_request.on('error', function(e) {
     console.log('Error trying to verify the existence of the dashboard with slug ' + slug + ': ' + e);
   });
-  
+
   get_request.end();
 }
 
@@ -120,14 +120,14 @@ var deleteDashboard = function(slug) {
             deleteDashboard(slug);
           });
           break;
-      } 
-      
+      }
+
   });
-  
+
   delete_request.on('error', function(e) {
     console.log('Error trying to delete the dashboard with slug ' + slug + ': ' + e);
   });
-  
+
   delete_request.end();
 }
 
